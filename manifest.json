@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Focus Mode",
+  "version": "1.0",
+  "description": "Reduces distractions by replacing YouTube thumbnails.",
+  "permissions": ["storage"],
+  "host_permissions": ["*://www.youtube.com/*"],
+  "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icon.jpeg"
+  },
+  "content_scripts": [
+      {
+          "matches": ["*://www.youtube.com/*"],
+          "js": ["content.js"]
+      }
+  ]
+}
